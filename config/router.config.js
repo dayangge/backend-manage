@@ -48,7 +48,7 @@ export default [
         ],
       },
       // forms
-      {
+      /*   {
         path: '/form',
         icon: 'form',
         name: 'form',
@@ -92,9 +92,9 @@ export default [
             component: './Forms/AdvancedForm',
           },
         ],
-      },
+      },*/
       // list
-      {
+      /*  {
         path: '/list',
         icon: 'table',
         name: 'list',
@@ -266,9 +266,9 @@ export default [
             ],
           },
         ],
-      },
+      },*/
       //  editor
-      {
+      /*  {
         name: 'editor',
         icon: 'highlight',
         path: '/editor',
@@ -289,6 +289,539 @@ export default [
             component: './Editor/GGEditor/Koni',
           },
         ],
+      },*/
+      {
+        name: 'gameUser',
+        icon: 'folder',
+        path: '/gameUser',
+        routes: [
+          {
+            path: '/gameUser/userManage',
+            name: 'userManage',
+            component: './gameUser/userManage',
+          },
+          {
+            path: '/gameUser/onlineManage',
+            name: 'onlineManage',
+            component: './gameUser/onlineManage',
+          },
+          {
+            path: '/gameUser/holdLineManage',
+            name: 'holdLineManage',
+            component: './gameUser/holdLineManage',
+          },
+          {
+            path: '/gameUser/winTotal',
+            name: 'winTotal',
+            component: './gameUser/winTotal',
+          },
+          {
+            path: '/gameUser/onlineNumber',
+            name: 'onlineNumber',
+            component: './gameUser/onlineNumber',
+          },
+          {
+            path: '/gameUser/gameCoinLog',
+            name: 'gameCoinLog',
+            component: './gameUser/gameCoinLog',
+          },
+          {
+            path: '/gameUser/goldCoinLog',
+            name: 'goldCoinLog',
+            component: './gameUser/goldCoinLog',
+          },
+          {
+            path: '/gameUser/givingLog',
+            name: 'givingLog',
+            component: './gameUser/givingLog',
+          },
+          {
+            path: '/gameUser/restrictedCharacter',
+            name: 'restrictedCharacter',
+            component: './gameUser/restrictedCharacter',
+          },
+          {
+            path: '/gameUser/restrictedIP',
+            name: 'restrictedIP',
+            component: './gameUser/restrictedIP',
+          },
+          {
+            path: '/gameUser/restrictedMachineCode',
+            name: 'restrictedMachineCode',
+            component: './gameUser/restrictedMachineCode',
+          },
+          {
+            path: '/gameUser/unbindAgent',
+            name: 'unbindAgent',
+            component: './gameUser/unbindAgent',
+          },
+          {
+            path: '/gameUser/gameLog',
+            name: 'gameLog',
+            component: './gameUser/gameLog',
+          },
+        ],
+      },
+      {
+        path: '/userDetail',
+        component: './userDetail',
+        routes: [
+          { path: '/userDetail', redirect: '/userDetail/basicInfo' },
+          {
+            path: '/userDetail/basicInfo',
+            component: './userDetail/basicInfo',
+          },
+          {
+            path: '/userDetail/detailInfo',
+            component: './userDetail/detailInfo',
+          },
+          {
+            path: '/userDetail/assetInfo',
+            component: './userDetail/assetInfo',
+          },
+          {
+            path: '/userDetail/logInfo',
+            component: './userDetail/logInfo',
+          },
+        ],
+      },
+      {
+        path: '/controlSystem',
+        name: 'controlSystem',
+        icon: 'unlock',
+        routes: [
+          { path: '/controlSystem', redirect: '/controlSystem/userControl' },
+          {
+            path: '/controlSystem/userControl',
+            name: 'userControl',
+            component: './controlSystem/userControl',
+          },
+          {
+            path: '/controlSystem/gameControl',
+            name: 'gameControl',
+            component: './controlSystem/gameControl',
+          },
+          {
+            path: '/controlSystem/moreControl',
+            name: 'moreControl',
+            component: './controlSystem/moreControl',
+          },
+          {
+            path: '/controlSystem/superControl',
+            name: 'superControl',
+            component: './controlSystem/superControl',
+          },
+        ],
+      },
+      {
+        path: '/robotSetting',
+        name: 'robotSetting',
+        icon: 'smile',
+        routes: [
+          { path: '/robotSetting', redirect: '/robotSetting/robotConfig' },
+          {
+            path: '/robotSetting/robotConfig',
+            name: 'robotConfig',
+            component: './robotSetting/robotConfig',
+          },
+        ],
+      },
+      {
+        path: '/rechargeSystem',
+        name: 'rechargeSystem',
+        icon: 'bell',
+        routes: [
+          {
+            path: '/rechargeSystem/rechargeLog',
+            name: 'rechargeLog',
+            component: './rechargeSystem/rechargeLog',
+          },
+          {
+            path: '/rechargeSystem/orderManage',
+            name: 'orderManage',
+            component: './rechargeSystem/orderManage',
+          },
+          {
+            path: '/rechargeSystem/rechargeAmount',
+            name: 'rechargeAmount',
+            component: './rechargeSystem/rechargeAmount',
+          },
+          {
+            path: '/rechargeSystem/agentRechargeOrder',
+            name: 'agentRechargeOrder',
+            component: './rechargeSystem/agentRechargeOrder',
+          },
+          {
+            path: '/rechargeSystem/rechargeInterface',
+            name: 'rechargeInterface',
+            component: './rechargeSystem/rechargeInterface',
+          },
+          {
+            path: '/rechargeSystem/rechargeChannel',
+            name: 'rechargeChannel',
+            component: './rechargeSystem/rechargeChannel',
+          },
+        ],
+      },
+      {
+        path: '/systemMaintenance',
+        name: 'systemMaintenance',
+        icon: 'desktop',
+        routes: [
+          {
+            path: '/systemMaintenance/systemMachineManage',
+            name: 'systemMachineManage',
+            component: './systemMaintenance/systemMachineManage',
+          },
+          {
+            path: '/systemMaintenance/systemGameManage',
+            name: 'systemGameManage',
+            component: './systemMaintenance/systemGameManage',
+            routes: [
+              {
+                path: '/systemMaintenance/systemGameManage',
+                redirect: '/systemMaintenance/systemGameManage/module',
+              },
+              {
+                path: '/systemMaintenance/systemGameManage/module',
+                component: './systemMaintenance/systemGameManage/module',
+              },
+              {
+                path: '/systemMaintenance/systemGameManage/game',
+                component: './systemMaintenance/systemGameManage/game',
+              },
+              {
+                path: '/systemMaintenance/systemGameManage/type',
+                component: './systemMaintenance/systemGameManage/type',
+              },
+              {
+                path: '/systemMaintenance/systemGameManage/mobile',
+                component: './systemMaintenance/systemGameManage/mobile',
+              },
+            ],
+          },
+          {
+            path: '/systemMaintenance/systemSetting',
+            name: 'systemSetting',
+            component: './systemMaintenance/systemSetting',
+          },
+          {
+            path: '/systemMaintenance/systemCheckInSetting',
+            name: 'systemCheckInSetting',
+            component: './systemMaintenance/systemCheckInSetting',
+          },
+          {
+            path: '/systemMaintenance/systemInfoPush',
+            name: 'systemInfoPush',
+            component: './systemMaintenance/systemInfoPush',
+          },
+          {
+            path: '/systemMaintenance/systemFullServiceNotice',
+            name: 'systemFullServiceNotice',
+            component: './systemMaintenance/systemFullServiceNotice',
+          },
+        ],
+      },
+      {
+        path: '/taskSystem',
+        name: 'taskSystem',
+        icon: 'inbox',
+        routes: [
+          {
+            path: '/taskSystem/taskManage',
+            name: 'taskManage',
+            component: './taskSystem/taskManage',
+          },
+          {
+            path: '/taskSystem/taskLog',
+            name: 'taskLog',
+            component: './taskSystem/taskLog',
+          },
+        ],
+      },
+      {
+        path: '/websiteSystem',
+        name: 'websiteSystem',
+        icon: 'fund',
+        routes: [
+          {
+            path: '/websiteSystem/newsManage',
+            name: 'newsManage',
+            component: './websiteSystem/newsManage',
+            routes: [
+              { path: '/websiteSystem/newsManage', redirect: '/websiteSystem/newsManage/news' },
+              {
+                path: '/websiteSystem/newsManage/news',
+                component: './websiteSystem/newsManage/newsAnnouncement',
+              },
+              {
+                path: '/websiteSystem/newsManage/mobile',
+                component: './websiteSystem/newsManage/mobileAnnouncement',
+              },
+            ],
+          },
+          {
+            path: '/websiteSystem/ruleManage',
+            name: 'ruleManage',
+            component: './websiteSystem/ruleManage',
+          },
+          {
+            path: '/websiteSystem/websiteConfig',
+            name: 'websiteConfig',
+            component: './websiteSystem/websiteConfig',
+            routes: [
+              {
+                path: '/websiteSystem/websiteConfig',
+                redirect: '/websiteSystem/websiteConfig/contact',
+              },
+              {
+                path: '/websiteSystem/websiteConfig/contact',
+                component: './websiteSystem/websiteConfig/contactConfig',
+              },
+              {
+                path: '/websiteSystem/websiteConfig/site',
+                component: './websiteSystem/websiteConfig/siteSetting',
+              },
+              {
+                path: '/websiteSystem/websiteConfig/mobile',
+                component: './websiteSystem/websiteConfig/mobileConfig',
+              },
+              {
+                path: '/websiteSystem/websiteConfig/server',
+                component: './websiteSystem/websiteConfig/serviceConfig',
+              },
+              {
+                path: '/websiteSystem/websiteConfig/share',
+                component: './websiteSystem/websiteConfig/shareConfig',
+              },
+              {
+                path: '/websiteSystem/websiteConfig/ios',
+                component: './websiteSystem/websiteConfig/iosConfig',
+              },
+            ],
+          },
+          {
+            path: '/websiteSystem/activityManage',
+            name: 'activityManage',
+            component: './websiteSystem/activityManage',
+          },
+          {
+            path: '/websiteSystem/activityManage/add',
+            component: './websiteSystem/add',
+          },
+          {
+            path: '/websiteSystem/activityManage/modify',
+            component: './websiteSystem/modify',
+          },
+        ],
+      },
+      {
+        path: '/managerSystem',
+        name: 'managerSystem',
+        icon: 'team',
+        routes: [
+          {
+            path: '/managerSystem/managerSetting',
+            name: 'managerSetting',
+            component: './managerSystem/managerSetting',
+            routes: [
+              {
+                path: '/managerSystem/managerSetting',
+                redirect: '/managerSystem/managerSetting/role',
+              },
+              {
+                path: '/managerSystem/managerSetting/role',
+                component: './managerSystem/managerSetting/roleManage',
+              },
+              {
+                path: '/managerSystem/managerSetting/manager',
+                component: './managerSystem/managerSetting/managerSetting',
+              },
+              {
+                path: '/managerSystem/managerSetting/role/setting',
+                component: './managerSystem/managerSetting/setting',
+              },
+            ],
+          },
+          {
+            path: '/managerSystem/operationLog',
+            name: 'operationLog',
+            component: './managerSystem/operationLog',
+          },
+        ],
+      },
+      {
+        path: '/financeSystem',
+        name: 'financeSystem',
+        icon: 'dollar',
+        routes: [
+          {
+            path: '/financeSystem/goldCoinTradeSetting',
+            name: 'goldCoinTradeSetting',
+            component: './financeSystem/goldCoinTradeSetting',
+          },
+          {
+            path: '/financeSystem/goldCoinTradeManage',
+            name: 'goldCoinTradeManage',
+            component: './financeSystem/goldCoinTradeManage',
+          },
+          {
+            path: '/financeSystem/agentSetting',
+            name: 'agentSetting',
+            component: './financeSystem/agentSetting',
+          },
+          {
+            path: '/financeSystem/settlementManage',
+            name: 'settlementManage',
+            component: './financeSystem/settlementManage',
+          },
+          {
+            path: '/financeSystem/playerPumping',
+            name: 'playerPumping',
+            component: './financeSystem/playerPumping',
+          },
+          {
+            path: '/financeSystem/roomPumping',
+            name: 'roomPumping',
+            component: './financeSystem/roomPumping',
+          },
+          {
+            path: '/financeSystem/withdrawManage',
+            name: 'withdrawManage',
+            component: './financeSystem/withdrawManage',
+          },
+          {
+            path: '/financeSystem/lotteryLog',
+            name: 'lotteryLog',
+            component: './financeSystem/lotteryLog',
+          },
+        ],
+      },
+      {
+        path: '/agentSystem',
+        name: 'agentSystem',
+        icon: 'apartment',
+        routes: [
+          { path: '/agentSystem', redirect: '/agentSystem/agentManage' },
+          {
+            path: '/agentSystem/agentManage',
+            name: 'agentManage',
+            component: './agentSystem/agentManage',
+          },
+          {
+            path: '/agentSystem/agentDomainSetting',
+            name: 'agentDomainSetting',
+            component: './agentSystem/agentDomainSetting',
+          },
+          {
+            path: '/agentSystem/rechargeRate',
+            name: 'rechargeRate',
+            component: './agentSystem/rechargeRate',
+          },
+          {
+            path: '/agentSystem/rechargeReport',
+            name: 'rechargeReport',
+            component: './agentSystem/rechargeReport',
+          },
+          {
+            path: '/agentSystem/newUserStat',
+            name: 'newUserStat',
+            component: './agentSystem/newUserStat',
+          },
+          {
+            path: '/agentSystem/agentCheckManage',
+            name: 'agentCheckManage',
+            component: './agentSystem/agentCheckManage',
+          },
+        ],
+      },
+      {
+        path: '/agentDetail',
+        component: './agentDetail',
+        routes: [
+          { path: '/agentDetail', redirect: '/agentDetail/detail' },
+          {
+            path: '/agentDetail/detail',
+            component: './agentDetail/detail',
+          },
+          {
+            path: '/agentDetail/subordinateAgent',
+            component: './agentDetail/subordinateAgent',
+          },
+          {
+            path: '/agentDetail/subordinatePlayer',
+            component: './agentDetail/subordinatePlayer',
+          },
+          {
+            path: '/agentDetail/goldChange',
+            component: './agentDetail/goldChange',
+          },
+          {
+            path: '/agentDetail/subordinateRecharge',
+            component: './agentDetail/subordinateRecharge',
+          },
+          {
+            path: '/agentDetail/subordinateGame',
+            component: './agentDetail/subordinateGame',
+          },
+          {
+            path: '/agentDetail/subordinateWithdrawal',
+            component: './agentDetail/subordinateWithdrawal',
+          },
+          {
+            path: '/agentDetail/offlineRecharge',
+            component: './agentDetail/offlineRecharge',
+          },
+          {
+            path: '/agentDetail/playerWin',
+            component: './agentDetail/playerWin',
+          },
+          {
+            path: '/agentDetail/rechargeCommission',
+            component: './agentDetail/rechargeCommission',
+          },
+          {
+            path: '/agentDetail/rechargeConfig',
+            component: './agentDetail/rechargeConfig',
+          },
+        ],
+      },
+      {
+        path: '/pushSystem',
+        name: 'pushSystem',
+        icon: 'share-alt',
+        routes: [
+          {
+            path: '/pushSystem/pushManage',
+            name: 'pushManage1',
+            component: './pushSystem/pushManage1',
+            routes: [
+              { path: '/pushSystem/pushManage', redirect: '/pushSystem/pushManage/push' },
+              {
+                path: '/pushSystem/pushManage/push',
+                component: './pushSystem/pushManage1/pushManage',
+              },
+              {
+                path: '/pushSystem/pushManage/commission',
+                component: './pushSystem/pushManage1/commissionManage',
+              },
+            ],
+          },
+          {
+            path: '/pushSystem/pushWithdrawal',
+            name: 'pushWithdrawal',
+            component: './pushSystem/pushWithdrawal',
+          },
+          {
+            path: '/pushSystem/pushWithdrawalConfig',
+            name: 'pushWithdrawalConfig',
+            component: './pushSystem/pushWithdrawalConfig',
+          },
+        ],
+      },
+      {
+        path: '/userDetail/index',
+        component: './userDetail/index',
       },
       {
         component: '404',

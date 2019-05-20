@@ -13,24 +13,24 @@ import getPageTitle from '@/utils/getPageTitle';
 const links = [
   {
     key: 'help',
-    title: formatMessage({ id: 'layout.user.link.help' }),
+    title: '帮助',
     href: '',
   },
   {
     key: 'privacy',
-    title: formatMessage({ id: 'layout.user.link.privacy' }),
+    title: '隐私',
     href: '',
   },
   {
     key: 'terms',
-    title: formatMessage({ id: 'layout.user.link.terms' }),
+    title: '项目',
     href: '',
   },
 ];
 
 const copyright = (
   <Fragment>
-    Copyright <Icon type="copyright" /> 2018 蚂蚁金服体验技术部出品
+    Copyright <Icon type="copyright" /> 棋牌总后台管理
   </Fragment>
 );
 
@@ -55,18 +55,18 @@ class UserLayout extends Component {
     return (
       <DocumentTitle title={getPageTitle(pathname, breadcrumbNameMap)}>
         <div className={styles.container}>
-          <div className={styles.lang}>
+          {/* <div className={styles.lang}>
             <SelectLang />
-          </div>
+          </div> */}
           <div className={styles.content}>
             <div className={styles.top}>
               <div className={styles.header}>
                 <Link to="/">
                   <img alt="logo" className={styles.logo} src={logo} />
-                  <span className={styles.title}>Ant Design</span>
+                  <span className={styles.title}>棋牌后台管理</span>
                 </Link>
               </div>
-              <div className={styles.desc}>Ant Design 是西湖区最具影响力的 Web 设计规范</div>
+              <div className={styles.desc}>您可以在这里登录</div>
             </div>
             {children}
           </div>

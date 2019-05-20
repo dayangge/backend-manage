@@ -8,9 +8,8 @@ const FooterView = () => (
     <GlobalFooter
       links={[
         {
-          key: 'Pro 首页',
-          title: 'Pro 首页',
-          href: 'https://pro.ant.design',
+          key: '总后台管理',
+          title: '总后台管理',
           blankTarget: true,
         },
         {
@@ -20,15 +19,15 @@ const FooterView = () => (
           blankTarget: true,
         },
         {
-          key: 'Ant Design',
-          title: 'Ant Design',
-          href: 'https://ant.design',
+          key: 'YG tech',
+          title: 'YG tech',
+          href: '',
           blankTarget: true,
         },
       ]}
       copyright={
         <Fragment>
-          Copyright <Icon type="copyright" /> 2018 蚂蚁金服体验技术部出品
+          Copyright <Icon type="copyright" /> 棋牌后台由亚冠科技提供技术支持
         </Fragment>
       }
     />
